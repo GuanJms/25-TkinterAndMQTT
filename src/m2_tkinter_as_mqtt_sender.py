@@ -76,7 +76,7 @@ def main():
     back_button = ttk.Button(main_frame, text="Back")
     back_button.grid()
     back_button['command'] = lambda: mqtt_client.send_message("say_it", ["Back",left_speed_entry.get(),left_speed_entry.get()])
-    root.bind('<Down>', lambda mqtt_client.send_message("say_it", ["Back",left_speed_entry.get(),left_speed_entry.get()]))
+    root.bind('<Down>', lambda: mqtt_client.send_message("say_it", ["Back",left_speed_entry.get(),left_speed_entry.get()]))
 
     up_button = ttk.Button(main_frame, text="Up")
     up_button.grid()
